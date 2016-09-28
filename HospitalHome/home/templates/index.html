@@ -1,0 +1,217 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Reciprocal 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140119
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+<link rel="stylesheet" href="{% static 'css/default.css' %}" >
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" >
+<link rel="stylesheet" href="{% static 'css/style.css' %}" >
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="#">hospital@home</a></h1>
+			</div>
+			<div id="login-signup">
+			<a class="waves-effect waves-light btn " style="background-color: #202020;overflow: hidden;" href="login/">Login</a>
+			<a class="waves-effect waves-light btn " style="background-color: #202020;overflow: hidden;" href="signup/">Register</a>
+			</div>
+			<!--<div id="social">
+				<ul class="contact">
+					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+					<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+					<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+					<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+					<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+				</ul>
+			</div>-->
+		</div>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+				<li><a href="#portfolio" accesskey="2" title="">Consult</a></li>
+				<li><a href="#aboutus" accesskey="3" title="">About Us</a></li>
+				<li><a href="#contactus" accesskey="4" title="">Contact Us</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<div id="page" class="container">
+	<div><a href="#" class="image image-full"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a></div>
+	</div>
+	<!--<div id="page" class="container">
+		<div><a href="#" class="image image-full"><img src="images/pic03.jpg" alt="" /></a></div>
+		<div class="column1">
+			<div class="title">
+				<h2>Maecenas luctus</h2>
+				<span class="byline">Pellentesque lectus gravida blandit</span>
+			</div>
+			<p>This is <strong>Reciprocal</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+			<a href="#" class="button">Etiam posuere</a>
+		</div>
+		<div class="column3">
+			<div class="title">
+				<h2>Mauris vulputate</h2>
+			</div>
+			<img src="images/pic01.jpg" width="282" height="150" alt="" />
+			<p>Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
+			<a href="#" class="button">Etiam posuere</a>
+		</div>
+		<div class="column4">
+			<div class="title">
+				<h2>Praesent tempor</h2>
+			</div>
+			<img src="images/pic02.jpg" width="282" height="150" alt="" />
+			<p>Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus.</p>
+			<a href="#" class="button">Etiam posuere</a>
+		</div>
+	</div>-->
+	<div id="portfolio-wrapper">
+		<div id="portfolio" class="container">
+			<!--<div class="title">
+				<h2>Aenean elementum</h2>
+				<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span> </div>-->
+			<div class="column1">
+				<div class="box">
+					<span class="icon"><img src= "{% static 'images/symptom.jpeg' %}" /></a></span>
+					<h3>Symptom Checker</h3>
+					<p>This lets you predict the disease you are most probably suffering from based on the symptoms you enter.</p>
+					<a href="#" class="button">CHECK YOUR SYMPTOMS</a> </div>
+			</div>
+			<div class="column2">
+				<div class="box">
+					<span class="icon"><img src= "{% static 'images/index.jpeg' %}"/></span>
+					<h3>Medicine suggestions</h3>
+					<p>This suggests medicines for the cure of the disease/ailment based on the entered symptoms.</p>
+					<a href="#" class="button" style="margin-top:56px">SUGGEST</a> </div>
+			</div>
+			<div class="column3">
+				<div class="box">
+					<span class="icon"><img src= "{% static 'images/doctor.jpeg' %}" /></span>
+					<h3>Find a doctor</h3>
+					<p>Helps you find a doctor based on the required specialisation, location, and other filters.</p> 
+					<a href="#" class="button" style="margin-top:48px">SEARCH</a> </div>
+			</div>
+		</div>
+	</div>
+	  <div class="row">
+	  	<h5 class="titles">Health News </h5>
+        <div class="col s1 m1 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/pic01.jpg' %}">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s1 m1 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/pic02.jpg' %}">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s1 m1 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/pic01.jpg' %}">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s1 m1 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/pic02.jpg' %}">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+     </div>
+     <br>
+     <div id="aboutus" class="container">
+     	<h5 class="titles">About us</h5>
+     	<br>
+     	<p style="margin-left:1.5em;padding-bottom:1em"> <a href="#"> <b>hospital@home</b> </a> is a site that helps lets you check your health based on your symptoms, suggest medicines , seek the help of certified doctors, provide valuable health information, tools for managing your health, and support to those who seek information. You can trust that our content is timely and credible.
+     </div>
+
+     <div id="contactus" class="container">
+     	<h5 class="titles">Contact us</h5>
+     	<br>
+     	<div class="row">
+    <form class="col s12" style="padding-left:2em;padding-right:2em;">
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </form>
+  </div>
+     </div>
+
+</div>
+<div id="footer">
+</div>
+</body>
+</html>
