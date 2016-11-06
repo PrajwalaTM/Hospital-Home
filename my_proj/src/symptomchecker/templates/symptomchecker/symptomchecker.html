@@ -32,14 +32,14 @@
   $('.modal-trigger').leanModal();
 });  </script>
 <div id="wrapper">
-	<div id="page-wrapper">
-		<div id="page">
-			<div id="wide-content" >
+  <div id="page-wrapper">
+    <div id="page">
+      <div id="wide-content" >
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
      <div class="row">
-     	<div class="col s1 m10">
+      <div class="col s1 m10">
      <h4 class=black-text> Disorders and Conditions </h4>
  </div>
    <div class="col s1 m2">
@@ -64,7 +64,7 @@
    <div id="modal2" class="modal">
     <div class="modal-content">
      <div class="row">
-     	<div class="col s1 m10">
+      <div class="col s1 m10">
      <h4 class=black-text> Body Locations/Systems </h4>
  </div>
    <div class="col s1 m2">
@@ -88,57 +88,119 @@
     </div>
     
   </div>
-  				<div class="row">
-    				
-  				<div class="col s1 m4" >
-				<p><br><img src="{% static 'site/img/symptom.jpeg' %}" alt="" width="200" height="200" class="alignleft" /> </p>
-			    </div>
-			    <div class="input-field col s1 m5">
-					<h3>Symptom<b style="color:#069">Checker</b></h3>
-					<p> Experiencing symptoms but not sure what they mean?
+          <div class="row">
+            
+          <div class="col s1 m4" >
+        <p><br><img src="{% static 'site/img/symptom.jpeg' %}" alt="" width="200" height="200" class="alignleft" /> </p>
+          </div>
+          <div class="input-field col s1 m5">
+          <h3>Symptom<b style="color:#069">Checker</b></h3>
+          <p> Experiencing symptoms but not sure what they mean?
 Use our Symptom Checker to help determine possible causes and treatments, and when to see a doctor. </p>
-                   <input id="first_name" type="search" class="validate" style="border: 1px solid black" >
-                   <label for="first_name"></label>
-                   
+                   <form action="{% url "symptomchecker:process" %}" method="POST">
+                    {% csrf_token %}
+                    
+                   <input id="symptomquery" type="search" class="validate" style="border: 1px solid black" name="symptom_text" >
+                   <label for="symptom_text"></label>
                 </div>
                  <div class="col s1 m1">
                  <br><br><br><br><br><br><br><br><br><br>
- 				 <button class="btn waves-effect waves-light light-blue darken-3" type="submit" name="action">Go
+         <button class="btn waves-effect waves-light light-blue darken-3" type="submit" name="action">Go
                  </button>
+                 
+                
                  </div>
+                 
                 </div>
-				
-				
-	<div class="row">
-	<br><br><br><br>
+                <!--{% for row,ad in twolists%}
+                <div class="divider"></div>
+                <div class="section">
+                <h5>{{row.0}}</h5>
+                <p>{{ad}}</p>
+                </div>
+                {% endfor %}-->
+                {% for x in unique_data%}
+                <div class="divider"></div>
+                <div class="section">
+                <h5>{{x.0}} <span style="float:right">{{x.2}}</span> </h5>
+                <p>{{x.1}}</p>
+                </div>
+                {% endfor %}
+                
+        
+        
+  <div class="row">
+  <br><br><br><br>
     <div class="col s12 m6">
         <h5 class="black-text"> Assess your Symptoms </h4>
         <span class="blue-text"><br>Want to know what's causing your aches, pain, or rashes? We can identify conditions related to your symptoms.
           </span>
         </div>
         <div class="col s12 m6">
-        	<h5 class="black-text"> Learn About Possible Causes </h4>
-        	<span class="blue-text"><br>Get a better understanding of a condition: Discover if you're at risk, how it's diagnosed, and what you can do about it.
+          <h5 class="black-text"> Learn About Possible Causes </h4>
+          <span class="blue-text"><br>Get a better understanding of a condition: Discover if you're at risk, how it's diagnosed, and what you can do about it.
           </span>
       </div>
     </div>
     <br><br>
         <div class="row">    
-		
-			<a class="modal-trigger" href="#modal1"> <h6 class="black-text"><b style="color:#069;padding-left:10px" >List of most common disorders and conditions</b> </h6> </a>
-			<br> 
-            <a class="modal-trigger" href="#modal2"> <h6 class="black-text"><b style="color:#069;padding-left:10px" > List of body locations/systems</b> </h6> </a>
-		</div>
-           
     
-            
-			</div>
-		
-
-	
-		
-
-	</div>
+      <a class="modal-trigger" href="#modal1"> <h6 class="black-text"><b style="color:#069;padding-left:10px" >List of most common disorders and conditions</b> </h6> </a>
+      <br> 
+            <a class="modal-trigger" href="#modal2"> <h6 class="black-text"><b style="color:#069;padding-left:10px" > List of body locations/systems</b> </h6> </a>
+    </div>
+    <div id="modal3" class="modal">
+    <div class="modal-content">
+     <div class="row">
+      <div class="col s1 m10">
+     <h4 class=black-text> Recommended Doctors </h4>
+ </div>
+   <div class="col s1 m2">
+ <a href="#!" class=" modal-action modal-close waves-effect btn">X</a>
 </div>
+
+
+
+      <table>
+        <thead>
+          <tr>
+              <th data-field="id">Doctor Name</th>
+              <th data-field="name">Speciality</th>
+              <th data-field="price">Clinic Name</th>
+              <th data-field="price">Address</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for doctor in doctors %}
+          <tr>
+            <td>{{doctor.0}}</td>
+            <td>{{doctor.1}}</td>
+             <td>{{doctor.2}}</td>
+              <td>{{doctor.3}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+            
+
+
+</div>
+    
+
+
+    </div>
+    
+  </div>
+       <a class="modal-trigger waves-effect waves-light light-blue darken-3 btn " href="#modal3">Get Doctors for your symptoms</a>         
+      </div>
+    
+</form> 
+  
+    
+
+  </div>
+</div>
+
 </body>
 </html>

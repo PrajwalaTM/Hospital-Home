@@ -2,6 +2,12 @@
 import os
 import sys
 
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except:
+    pass
+
 if __name__ == "__main__":
     # CHANGED manage.py will use development settings by
     # default. Change the DJANGO_SETTINGS_MODULE environment variable
