@@ -16,7 +16,7 @@ http://dev.mysql.com/downloads/
 
 5. To run the server on localhost, run the following commands: 
 
-cd Hospital-Home/my_proj/src 
-python manage.py runserver
+  cd Hospital-Home/my_proj/src 
+  python manage.py runserver
 
 6. The website now is ready to use.
