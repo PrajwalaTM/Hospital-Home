@@ -13,7 +13,7 @@ This is a repository containing files related to Hospital@Home website.
 
 4. Extract the database from the sqldump file using the following command: 
     
-    mysql -u root -p --one-database destdbname < hospitalHome.sql
+    mysql -u root -p --one-database <destdbname> hospitalHome.sql 
 
 
 5. To run the server on localhost, run the following commands: 
